@@ -1,7 +1,8 @@
 const five = require('johnny-five')
 const express = require('express')
-const board = new five.Board()
 const ws = require('ws')
+
+const board = new five.Board()
 let servo = null
 
 const app = express()
