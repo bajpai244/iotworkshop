@@ -7,4 +7,14 @@ if ('WebSocket' in window) {
   )
 }
 
-function clicked() {}
+function clicked() {
+  const input = document.getElementById('angle').value
+  const intInput = Number.parseInt(input)
+
+  if (isNaN(intInput) == false) {
+    ws.send(intInput)
+    console.log('sent')
+  } else {
+    alert('Please Enter A valid Number')
+  }
+}
